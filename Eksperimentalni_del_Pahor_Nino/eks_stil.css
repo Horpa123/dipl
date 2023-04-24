@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@700&display=swap');
+
+.preload * {
+    transition: none !important;
+  }
+
+/*body::-webkit-scrollbar{ /*skrije scrollbar ampak se vedno lahko scrollamo*/
+/*    display: none;
+  }*/
+
+body,html{
+    margin: 0rem;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black;
+}
+
+.container{
+position: absolute;
+  height: 100vh;
+  width: 100vw; 
+  scroll-snap-type: mandatory;
+}
+
+#prvi{ 
+    position: relative; 
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    scroll-snap-align: start;
+}
+
+#zvezda{
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    left: 60vw;
+    top: 40vh;
+    opacity: 40%;
+    transform: rotate(0deg);
+    transition: 1s ease-out;
+}
+
+#naslov{
+    height: 100vh;
+    width: 100vw;
+    align-items: left;
+    justify-content: center;
+    color: aliceblue;
+    font-family: 'Manrope', sans-serif;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+.box{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    left: 4%;
+}
+
+.beseda{
+    position: relative;
+    bottom:0px;
+    transition: all 0.8s ease-out;
+}
+
+#meni{
+    position:fixed;
+    top: 0;
+    left:0;
+    display:flex;
+    width:100vw;
+    height:6vh;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#meni > button:hover{
+    color: whitesmoke;
+    transition: color 0.2s ease-in-out;
+    
+}
+
+#meni > button{
+    display: flex;
+    width:8vw;
+    height:6vh;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: grey;
+    background-color: rgba(255,255,255,0.0);
+
+}
+
+#meni > button > a{
+    display: flex;
+    width:8vw;
+    height:6vh;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: grey;
+    background-color: rgba(255,255,255,0.0);
+    text-decoration: none;
+
+}
+
+#meni > button > a:hover{
+    color: whitesmoke;
+    transition: color 0.2s ease-in-out;
+
+}
+
+.linija{
+    position: relative;
+    width:55vw;
+    height: 0.5px;
+    background-color: silver;
+    margin: 0 auto;
+    z-index: 999;
+
+}
+
+#drugi{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+#tekst{
+    position: relative;
+    color: white;
+    width: 50vw;
+    height: 50vh;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    overflow: hidden;
+    z-index: 999;
+    top:15vh;
+    text-align: center;
+    
+}
+
+.krog{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 2em;
+    border-radius: 50%;
+    width: 14.2em;
+    height: 14.2em;
+    z-index: 999;
+    bottom: 10vh;
+    
+
+}
+
+.krog-notranji{
+    color: white;
+    border-radius: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.5em;
+    height: 10.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.krog-notranji::before{
+    content: '';
+    border-radius: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9.5em;
+    height: 9.5em;
+    z-index: -1;
+
+}
+
+.krog h1{
+    font-size: 2.6em;
+}
+
+.krog svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.track{
+    fill:none;
+}
+
+.progress{
+    fill: none;
+    stroke: white;
+    stroke-width: 22;
+    /*stroke-linecap: round;*/
+    /*nastavi progress na 0*/
+    stroke-dasharray: 630;
+    stroke-dashoffset: 630;
+    transition: 1s ease-in-out;
+}
+
+#kocka-div{
+    display: flex;
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: column; 
+
+}
+
+#kocka-div h1{
+    position: inherit;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 50px;
+    z-index: 999;
+}
+
+#krog-div{
+    display: flex;
+    position: relative;
+    height: 55vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.krog-animacija{
+    top: 5vh;
+    width: 200px;
+    height: 200px;
+    background-color: #DB504A;
+    border-radius: 50%;
+    position: relative;
+    animation-name: krog;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index: 9;
+}
+
+@keyframes krog {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+      color: #DB504A;
+    }
+    50% {
+      transform: scale(1.3);
+      background-color: #E85D75;
+      border-radius: 0%;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+      color: #DB504A;
+    }
+  }
+
+.kocka {
+    top: 10vh;
+    width: 200px;
+    height: 200px;
+    background-color:#00fa9a;
+    position: relative;
+    animation-name: kocka;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 9;
+    }
+@keyframes kocka {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 500px;
+    }
+}
+
+#wrap1{
+    display: flex;
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: row;   
+    justify-content:space-around;
+}
+
+#koda1{
+    padding: 20px;
+    height: 40vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+#razlaga1{
+    padding: 20px;
+    height: 40vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+#wrap2{
+    display: flex;
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+    overflow-x: hidden;
+    align-items: center;
+    flex-direction: row;   
+    justify-content:space-around;
+    top: -10vh;
+}
+
+#koda2{
+    padding: 20px;
+    height: 60vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+#razlaga2{
+    padding: 20px;
+    height: 60vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+#naslov_js{
+    top: 10vh;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#js_tekst{
+    position: relative;
+    color: white;
+    width: 50vw;
+    height: 50vh;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    overflow: hidden;
+    z-index: 999;
+    top:10vh;
+    text-align: center;
+    
+}
+
+.naslov{
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 50px;
+    z-index: 999;
+}
+
+#tretji{
+    top: 20vh;
+    display: flex;
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.prostor{
+       display: flex;
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;  
+    overflow-x: hidden; 
+    justify-content: center; 
+}
+
+#js-koda{
+    padding: 20px;
+    height: 40vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+
+    
+}
+
+#tekst-tretji{
+    padding: 20px;
+    height: 40vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scroll-prikaz{
+    position: relative;
+    color: white;
+    width: 50vw;
+    height: 50vh;
+    font-size: 200px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    z-index: 2000;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+#cetrti{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;  
+    overflow: hidden; 
+    align-items: center;
+}
+
+.puscica{
+    position: relative;
+    margin: 0 auto;
+    z-index: 999;
+    top: -5vh;
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid white;
+}
+
+#primer1{
+    height: 60vh;
+    width: 30vw;
+    z-index: 1000;
+    background-color: #171717;
+    overflow: auto;
+    margin-left: 200px;
+}
+
+#primer1 p{
+   height: 1971px;
+}
+
+.primer_tekst{
+    padding: 20px;
+    position: relative;
+    color: white;
+    width: 40vw;
+    height: 55vh;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 35px;
+    overflow: hidden;
+    z-index: 999;
+    left: 9vw;
+    background-color: #171717;
+}
+
+#primer1_prikaz{
+    position: absolute;
+    z-index: 999;
+    width: 40vw;
+    height: 50vh;
+    color: white;
+    left:53vw;
+    top:62vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 100px;
+}
+
+#primer2{
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+    height: 60vh;
+    width: 30vw;
+    z-index: 1000;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+    margin-left: 200px;
+}
+
+#primer2 p{
+    height: 180vh;
+ }
+
+#primer3{
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+    height: 60vh;
+    width: 30vw;
+    z-index: 1000;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+    margin-left: 200px;
+}
+
+#primer3 p{
+    height: 180vh;
+ }
+
+
+#kvadrat{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 17vw;
+    top: 34vh;
+    transform: rotate(0deg);
+    transition: 1s ease-out;
+}
+
+#kvadrat-razlaga{
+    top: 15vh;
+    display: flex;
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;   
+
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#js-koda1{
+    padding: 20px;
+    height: 55vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+#tekst-js-koda1{
+    padding: 20px;
+    height: 55vh;
+    width: 40vw;
+    color: white;
+    background-color: #171717;
+    z-index: 999;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+
+
+#peti{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;  
+    overflow-x: hidden; 
+}
+
+#sesti{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;  
+    overflow-x: hidden; 
+}
+
+#sedmi{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    scroll-snap-align: start;  
+    overflow-x: hidden; 
+    justify-content: center;
+    
+}
+
+.primer_tekst_z{
+    position: relative;
+    color: white;
+    width: 40vw;
+    height: 50vh;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 55px;
+    overflow: hidden;
+    z-index: 999;
+    text-align: center;
+    top: 10vh;
+
+}
+
+#slider_slik > .slika{
+    width: 35vmin;
+    height: 50vmin;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#slider_slik{
+    display: flex;
+    gap: 4vmin;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); /*da lahko spreminjamo vrednost*/
+    user-select: none;
+    overflow: hidden;
+    z-index: 999;
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="eks_stil.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@700&display=swap" rel="stylesheet">                             
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        
+       <!-- <script src="naslov.js"></script> -->
+        <script src="preload.js"></script>
+    </head>
+    <body>
+<div class="container"  class="preload" >
+    <div id="prvi"> <!-- Naslov animiran -->
+ <!--       <div id="meni">
+            <button><a href="#prvi">Prvi</a></button>
+            <button><a href="#drugi">Drugi</a></button>
+            <button><a href="#tretji">Tretji</a></button>
+            <button><a href="#cetrti">Cetrti</a></button>
+            <button><a href="#peti">Peti</a></button>
+            <button><a href="#sesti">Sesti</a></button>
+            <button><a href="#sedmi">Sedmi</a></button>
+        </div>  -->
+        <div id="naslov">
+            <div class="box">
+                <div class="beseda">IMPLEMENTACIJA ANIMACIJ</div>
+            </div>
+            <div class="box">
+                <div class="beseda">GIBANJA</div>
+            </div>
+            <div class="box">
+                <div class="beseda">IN PREHODOV</div>
+            </div>
+            <div class="box">
+                <div class="beseda">S POMOČJO SPLETNIH</div>
+            </div>
+            <div class="box">
+                <div class="beseda">IN PROGRAMSKIH JEZIKOV</div>
+            </div>
+        </div>
+        <img id="zvezda" src="zveza.png">
+        <script src="object_scroll.js"></script>
+    </div>
+    <div id="drugi"> 
+        <div class="linija"></div>
+        <div id="tekst">
+            Z višanjem popularizacije med podjetji in posamezniki v uporabi spletnih strani, se njihova kvaliteta hitro dviguje. Na splošno je znano, da vizualni elementi in oblikovanost spletnih strani najbolj puščajo vpliv, kar meni 94% uporabnikov spleta. Zato razne animacije, gibanja, tranzicije in interaktivnost ostajajo stalen trend med oblikovalci spletnih strani.
+        </div>
+        <div class="krog" data-prog="94">
+            <svg width="250" height="250">
+                <circle
+                    r="100"
+                    cx="125"
+                    cy="123"
+                    class="track">
+                </circle>
+                <circle
+                    r="100"
+                    cx="125"
+                    cy="123"
+                    class="progress">
+                </circle>    
+            </svg>
+            <div class="krog-notranji">
+                <h1>94%</h1>
+            </div>
+        </div>
+        <script src="krog.js"></script>
+        <div class="linija"></div>
+    </div> 
+    <div id="kocka-div">
+        <h1>Primera CSS animacije</h1>
+            <div class="kocka"></div>
+    </div>
+
+    <div id="wrap1">
+        <div id="koda1">
+            .kocka {<br>
+                width: <span style="color:mediumspringgreen;">200px</span>;<br>
+                height: <span style="color:mediumspringgreen;">200px</span>;<br>
+                position: <span style="color:mediumspringgreen;">relative</span>;<br>
+                animation-name: <span style="color:mediumspringgreen;">kocka</span>;<br>
+                animation-duration: <span style="color:mediumspringgreen;">3s</span>;<br>
+                animation-iteration-count: <span style="color:mediumspringgreen;">infinite</span>;<br>
+                animation-direction: <span style="color:mediumspringgreen;">alternate</span>;<br>
+                }<br>
+                <br>
+                <span style="color:mediumspringgreen;">@keyframes</span> kocka { <br>
+                    from { <br>
+                        left: <span style="color:mediumspringgreen;">-500px</span>; <br>
+                    } <br>
+                    to { <br>
+                        left:  <span style="color:mediumspringgreen;">500px</span>; <br>
+                    } <br>
+                }
+</div>
+        <div id="razlaga1">
+            Premikajoča se kocka je bila dosežene le z uporabo CSS-ja.
+            Kocko predstavlja DIV, kateri se po intervalih premika od točke do točke.
+            Animiran pa je z parametri: <br> <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">animation-name: kocka</span>, s katero deklariramo ime animacije, <br> 
+            <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">animation-duration: 3s</span> s katero nastavimo čas animacije na 3 sekunde, <br> 
+            <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">animation-iteration-count: infinite</span> s katero določimo kolikokrat se animacija izvrši<br> 
+            <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">animation-direction: alternate</span> s katerim določimo smer animacije <br> <br>
+            Sledi še CSS pravilo <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">@keyframes</span>, s katerim omogočimo premik kocke. <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">from</span> določa začetno točko kvadrata, katera je na poziciji -500px, <span style="color:mediumspringgreen; font-family: 'Roboto Mono', monospace;">to</span> pa določa končni položaj na desni strani z vrednostjo 500px. Vse te funkcije skupaj povzročijo, da se kvadrat premika levo in desno v neskončnost.
+            </div>
+</div>
+<div id="krog-div">
+    <div class="krog-animacija"></div>
+</div>
+<div id="wrap2">
+    <div id="koda2">
+        .krog-animacija{  <br>
+            width: <span style="color:#DB504A;">200px</span>;   <br>
+            height: <span style="color:#DB504A;">200px</span>;  <br>
+            background-color: <span style="color:#DB504A;">#DB504A</span>;  <br>
+            border-radius: <span style="color:#DB504A;">50%</span>; <br>
+            animation-name: <span style="color:#DB504A;">krog</span>;   <br>
+            animation-duration: <span style="color:#DB504A;">3s</span>; <br>
+            animation-iteration-count: <span style="color:#DB504A;">infinite</span>;    <br>
+            animation-timing-function: <span style="color:#DB504A;">ease-in-out</span>; <br>
+        }<br>
+        <br>
+        <span style="color:#DB504A;">@keyframes</span> krog {<br>
+            0% {<br>
+              transform: <span style="color:#DB504A;">scale(1)</span>;<br>
+              opacity: <span style="color:#DB504A;">1</span>;<br>
+              color: <span style="color:#DB504A;">#DB504A</span>;<br>
+            }<br>
+            50% {<br>
+              transform: <span style="color:#DB504A;">scale(1.3)</span>;<br>
+              background-color: <span style="color:#DB504A;">#E85D75</span>;<br>
+              border-radius: <span style="color:#DB504A;">0%</span>;<br>
+            }<br>
+            100% {<br>
+              transform: <span style="color:#DB504A;">scale(1)</span>;<br>
+              opacity: <span style="color:#DB504A;">1</span>;<br>
+              color: <span style="color:#DB504A;">#DB504A</span>;<br>
+            }<br>
+          }
+
+
+</div>
+    <div id="razlaga2">
+        Pravila animacije smo določili enako kot pri prejšnem primeru, dodana je bila le ena dodatna funkcija:<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">animation-timing-funciton: ease-in-out</span>, katera povzroči, da se animacija začne počasi, pospeši na sredini in nato se nazaj upočasni.
+        
+        Sledi še pravilo <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">@keyframes</span>, ki definira našo animacijo poimenovano krog<br> <br> 
+        
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">0%</span> določa začetni položaj kroga, kjer se uporabijo naslednje lastnosti:<br>
+        
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">transform: scale(1)</span> določa začetno velikost kroga, ki je 1.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">opacity: 1</span> določa začetno vidnost kroga, ki je popolnoma viden.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">color: #DB504A</span> določa začetno barvo besedila, ki je rdeča.<br> <br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">50%</span> določa srednji položaj animacije, kjer se uporabijo naslednje lastnosti:<br>
+        
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">transform: scale(1.3)</span> določa povečanje velikosti kroga na 1.3.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">background-color: #E85D75</span> določa spremembo barve ozadja kroga v rožnato.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">border-radius: 0%</span> določa spremembo radija kroga na 0%, kar povzroči, da se krog spremeni v kvadrat.<br> <br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">100%</span> določa končni položaj animacije, kjer se uporabijo naslednje lastnosti:<br> 
+        
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">transform: scale(1)</span> določa velikost kroga nazaj na 1.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">opacity: 1</span> ohranja vidnost kroga, ki ostaja popolnoma viden.<br> 
+        <span style="color:#DB504A; font-family: 'Roboto Mono', monospace;">color: #DB504A</span> vrne barvo besedila na začetno rdečo barvo.
+        </div>
+</div>
+<div class="linija"></div>
+<div id="naslov_js">
+    <div class="naslov">Uporaba Javascripta</div>
+
+    <div id="js_tekst">Veliko število animacij na spletnih straneh se odziva glede na našo pozicijo na strani. Katero lahko pridobimo z javascript-ovim poslušalcem  <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">window.scrollY</span>, kateri nam vrne našo pozicijo v pikslih na Y osi.
+    </div>
+
+    <div id="scroll-prikaz"></div>
+    <script src="scroll_prikaz.js"></script>
+</div>
+
+    <div id="tretji">
+
+
+            <div id="js-koda">
+                <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;"> window.addEventListener</span>('scroll', () =>{ <br>
+                    document.getElementById("scroll-prikaz").innerHTML = <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">window.scrollY</span>; <br>
+                })
+            </div>
+            <div id="tekst-tretji">
+                Ta koda doda poslušalca dogodkov na okno brskalnika, ki posluša dogodek <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scroll</span>, kar pomeni, da se koda sproži, ko uporabnik premakne drsnik na spletni strani. <br>
+                <br>
+                Ko se dogodek <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scroll</span> sproži, se sproži funkcija, ki poišče element s ID-jem <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scroll-prikaz</span> (kar je id DIV-a prikaza števila) in mu nastavi vsebino na vrednost <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">window.scrollY</span>.<br>
+                <br>
+                <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">window.scrollY</span> predstavlja število pikslov, za katere se je pomaknila spletna stran navpično od vrha okna. Ta vrednost se nato prikaže v elementu <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scroll-prikaz</span>.<br>
+                <br>
+                Z drugimi besedami, koda prikaže uporabniku, za koliko pikslov se je pomaknila spletna stran navpično, ko uporabnik premakne drsnik na spletni strani.
+                
+                
+                            </div>
+
+
+    </div>
+<div class="prostor"></div>
+<div class="linija"></div>
+    <div id="cetrti">
+        <div id="primer1">
+                <p></p>
+                <img id="kvadrat" src="kvadrat2.png">
+                <script src="kvadrat_scroll.js"></script>
+        </div>
+        <div class="primer_tekst">
+            V tem primeru s uporabo Javascript-a glede na Y lokacijo spreminja rotacija objekta. To dosežemo s funkcijo  <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">style.transform</span> s katero sežemo v CSS in integriramo dobljeno vrednost Y v količino rotacije kvadrata. <br> <br>
+
+
+        </div>
+        <div id="primer1_prikaz">0 deg</div>
+        </div>
+    <div class="puscica"></div>
+    <div id="kvadrat-razlaga">
+
+
+        <div id="js-koda1">
+            const scrollDemo = document.querySelector("#primer1");<br> <br>
+            scrollDemo.<span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">addEventListener</span>("scroll", event =>{<br>
+                let image = <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">document.getElementById</span>("kvadrat");<br>
+                <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">image.style.transform</span> ="rotate(" + scrollDemo.scrollTop/2 + "deg)";<br>
+                document.getElementById("primer1_prikaz").innerHTML = <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">Math.round</span>(scrollDemo.scrollTop/2)+" deg";<br>
+              }, );
+        </div>
+        <div id="tekst-js-koda1">
+            Ta koda doda poslušalca dogodkov na element z ID-jem "primer1" (DIV v katerem se nahaja kvadrat), kateri posluša 
+            dogodek "scroll", kar pomeni, 
+            da se koda sproži, ko uporabnik premakne drsnik v tem elementu. <br><br>
+            
+            Ko se dogodek "scroll" sproži, se sproži funkcija, ki najprej poišče element s ID-jem "kvadrat" 
+            in mu nastavi CSS lastnost <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">transform</span> z uporabo vrednosti <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scrollDemo.scrollTop/2</span>. Ta vrednost se pridobi 
+            s deljenjem trenutne pozicije drsnika v elementu z ID-jem "primer1" z 2.<br><br>
+            
+            <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">scrollDemo.scrollTop</span> predstavlja število pikslov, za katere se je pomaknila vsebina 
+            elementa navpično od vrha. S tem izračunom se slika z ID-jem "kvadrat" 
+            rotira glede na pozicijo drsnika, kar uporabniku omogoča interakcijo s spletno stranjo.<br><br>
+            
+            Nato se v element z ID-jem "primer1_prikaz" prikaže število stopinj, 
+            za katere se je slika z ID-jem "kvadrat" zavrtela, s pomočjo <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">Math.round(scrollDemo.scrollTop/2)+" deg"</span>. 
+            Funkcija <span style="color:#EA7AF4; font-family: 'Roboto Mono', monospace;">Math.round()</span> zaokroži število stopinj na najbližje celo število. <br><br>
+            
+            Z drugimi besedami, koda uporabniku omogoča, da z drsnikom v elementu upravlja rotacijo kvadrata, 
+            pri čemer se trenutna rotacija prikaže v elementu s prikazom.
+            
+                        </div>
+
+
+</div>
+    <div id="peti"></div>
+    <div id="sedmi">
+        <div class="primer_tekst_z">Zahtevnejši primer - slider slik (še točna razlaga primera)</div>
+        <div id="slider_slik" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="slika" src="https://images.unsplash.com/photo-1675310455109-df80d0a31330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" draggable="false"/>
+            <img class="slika" src="https://images.unsplash.com/photo-1675068711500-537d82cb4463?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1673754472479-84c988b6386c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1675007434327-085ab091c46f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQzfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1674397163504-1245de7aed6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1674904744153-0603f0df3afd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1674744634313-b9249d1b2932?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDUwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1674500287064-a91d52ae25a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDY1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1666780520108-698ea3899a25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDczfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+            <img class="slika" src="https://images.unsplash.com/photo-1674997636824-fade8b767f38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDc5fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" draggable="false" />
+        </div>
+        <script src="eks_script.js"></script>
+    </div>    
+</div>
+    </body>
+</html>
